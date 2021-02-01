@@ -28,7 +28,7 @@
           </ul>
         </nav>
         <p>
-          Immersive experiences that deliver
+          Immersive experiences <br>that deliver
         </p>
 
       </div>
@@ -50,7 +50,7 @@
       <div class="section-three">
         <div class="section-three-header">
           <h2>Our creations</h2>
-          <button>See all</button>
+          <button id="desktop-btn">See all</button>
         </div>
         <div class="gallery">
           <picture class="gallery__item gallery__item--1">
@@ -78,8 +78,8 @@
             <div class="overlay-text">The <br>grid</div>
           </picture>
           <picture class="gallery__item gallery__item--5">
-            <source media="(max-width: 768px)" srcset="./images/mobile/image-grid.jpg">
-            <source media="(min-width: 769px)" srcset="./images/desktop/image-grid.jpg">
+            <source media="(max-width: 768px)" srcset="./images/mobile/image-from-above.jpg">
+            <source media="(min-width: 769px)" srcset="./images/desktop/image-from-above.jpg">
             <img src="./images/desktop/image-grid.jpg" class="gallery__img" alt="From up above VR">
             <div class="overlay-text">From up <br>above VR</div>
           </picture>
@@ -101,33 +101,60 @@
             <img src="./images/desktop/image-fisheye.jpgg" class="gallery__img" alt="Make it fisheye">
             <div class="overlay-text">Make it <br>fisheye</div>
           </picture>
+          <button id="mobile-btn">See all</button>
         </div>
       </div>
     </main>
     <footer class="page-footer">
-      <div class="footer-div1">
+      <div id="desktop-footer">
+        <div class="footer-div1">
+          <h1>loopstudios</h1>
+          <ul class="icons-list">
+            <li><a href="" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+            <li><a href="" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+            <li><a href="" target="_blank"><i class="icon ion-logo-pinterest"></i></a></li>
+            <li><a href="" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="footer-div2">
+          <ul class="footer-nav"> 
+              <li><a href="">About</a></li>
+              <li><a href="">Careers</a></li>
+              <li><a href="">Events</a></li>
+              <li><a href="">Products</a></li>
+              <li><a href="">Support</a></li>
+          </ul>
+          <small>&copy; 2021 Loopstudios. All rights reserved.</small>
+        </div>
+        <div class="attribution">
+          <small>
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            Coded by <a href="#">Luciana Murimi</a>
+          </small>
+        </div>
+      </div>
+      <div id="mobile-footer">
         <h1>loopstudios</h1>
         <ul class="icons-list">
-          <li><a href="" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
-          <li><a href="" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
-          <li><a href="" target="_blank"><i class="icon ion-logo-pinterest"></i></a></li>
-          <li><a href="" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
-        </ul>
-      </div>
-      <div class="footer-div2">
-        <ul class="footer-nav"> 
+          <ul class="footer-nav"> 
             <li><a href="">About</a></li>
             <li><a href="">Careers</a></li>
             <li><a href="">Events</a></li>
             <li><a href="">Products</a></li>
             <li><a href="">Support</a></li>
         </ul>
+        <ul class="mobile-icons">
+          <li><a href="" target="_blank"><i class="icon ion-logo-facebook"></i></a></li>
+          <li><a href="" target="_blank"><i class="icon ion-logo-twitter"></i></a></li>
+          <li><a href="" target="_blank"><i class="icon ion-logo-pinterest"></i></a></li>
+          <li><a href="" target="_blank"><i class="icon ion-logo-instagram"></i></a></li>
+        </ul>
         <small>&copy; 2021 Loopstudios. All rights reserved.</small>
-      </div>
-      <div class="attribution">
         <small>
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">Luciana Murimi</a>
+        </small>
+        <small>
+          Coded by <a href="https://github.com/LucianaMurimi/loopstudios-landing-page-main">Luciana Murimi</a>
         </small>
       </div>
     </footer>
