@@ -1,0 +1,269 @@
+/* Importing Fonts */
+@import url("https://fonts.googleapis.com/css?family=Alata:400");
+@import url("https://fonts.googleapis.com/css?family=Josefin Sans:300");
+
+/*-----------------------------------------------
+Basic Styling */
+:root {
+	--main-white-color:  hsl(0, 0%, 100%);
+    --main-black-color: hsl(0, 0%, 0%);
+    --dark-gray-color: hsl(0, 0%, 55%);
+    --very-dark-gray-color: hsl(0, 0%, 41%);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-white-color);
+    font: 15px/1.5 "Josefin Sans", sans-serif;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/*-----------------------------------------------
+.section-one Styling */
+.section-one {
+    display: flex;
+	flex-direction: column;
+	flex-grow: 1;	/*expands to cover available space inside the flex container*/
+	min-height: 100vh;
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+
+    color: var(--main-white-color);
+    padding: 3em 9em;
+}
+.section-one nav, .footer-div1, .footer-div2 {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center;
+}
+.section-one h1, .footer-div1 h1 {
+    font-size: 2.2em;
+    font-weight: bolder;
+}
+.section-one ul {
+    list-style: none;
+	display: flex;
+	order: 1;
+	width: auto; 
+    margin-top: 0;
+}
+.section-one li {
+    font-weight: bold;
+}
+.section-one ul li:not(:last-child) {
+	padding-right: 40px;
+}
+.section-one a {
+    text-decoration: none;
+    color: inherit;
+}
+.section-one p {
+    margin: auto 0;
+    max-width: 550px;
+    padding: 0.4em;
+    border: 2px solid var(--main-white-color);
+
+    font-size: 4em;
+    text-transform: uppercase;
+}
+/*-----------------------------------------------
+.section-two Styling */
+.section-two {
+    min-height: 80vh;
+    margin: 9em 9em;
+    position: relative;
+}
+.box {
+    width: 65vw;
+    height: 85vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    background-image: url(../images/desktop/image-interactive.jpg);
+    background-repeat: no-repeat;
+  }
+  
+  .overlay {
+    width: 40vw;
+    height: 56vh;
+    z-index: 2;
+    margin: 15em 9em 9em 38em;
+    background: var(--main-white-color);
+
+    padding: 5em 2em 5em 5em;
+  }
+  .overlay h2 {
+    font: 3em/1 "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+  .overlay p {
+    font-family: "Alata", sans-serif;
+  }
+/*-----------------------------------------------
+.section-three Styling */
+.section-three {
+    min-height: 100vh;
+    margin: 9em 9em; 
+}
+.section-three-header {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+/* .section-three-header h2 ==> same as section-two h2 */
+.section-three-header h2{
+    font: 3em "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+}
+.section-three-header button {
+	background: none;
+	outline: none;
+    cursor: pointer;
+    
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+	padding: 0.6em 1.6em;
+    border: 2px solid var(--very-dark-gray-color);
+}
+.section-three-header button:hover {
+    background-color: var(--dark-gray-color);
+    color: var(--main-white-color);
+}
+/* Gallery Styling */
+.gallery {
+    margin-top: 3em;
+	display: grid; /*define grid container-8*8 grid container*/
+	grid-template-columns: repeat(8, 1fr);	/*set column tracks*/
+	grid-template-rows: repeat(10, 5vw);		/*set row tracks. set is: 12 rows each with the height of 5 viewport width*/
+	grid-gap: 2em;		/*grid gap between columns and containers*/
+}
+/*styling images*/
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--3 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--4 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+.gallery__item--5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 11;
+}
+.gallery__item--6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 11;
+}
+.gallery__item--7 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 6;
+    grid-row-end: 11;
+}
+.gallery__item--8 {
+    grid-column-start: 7;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 11;
+}
+/* overlay text */
+picture {
+	position: relative;
+}
+.overlay-text {
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1.5em 1.5em 1em;
+  	color: var(--main-white-color);
+    font-size: 1.6em;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) );   
+}
+/*-----------------------------------------------
+.footer Styling */
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 20vh;
+    background-color: var(--main-black-color);
+    padding: 2em 9em;
+    color: var(--main-white-color);
+    font: "Alata", sans-serif;
+}
+.footer-div1 ul {
+    font-size: 1.8em;
+}
+.footer-div2 {
+    margin: 1em 0;
+    font-weight: bold;
+}
+.footer-div1 ul, .footer-div2 ul {
+    list-style: none;
+	display: flex;
+	width: auto; 
+}
+.footer-div1 ul li:not(:last-child) {
+    padding-right: 20px;
+}
+.footer-div2 ul li:not(:last-child){
+	padding-right: 40px;
+}
+.footer-div1 a, .footer-div2 a {
+    text-decoration: none;
+    color: inherit;
+}
+.attribution {
+    text-align: center;
+}
+small {
+    color: var(--dark-gray-color);
+    font-weight: bold;
+}
