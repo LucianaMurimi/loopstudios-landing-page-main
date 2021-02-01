@@ -131,7 +131,7 @@ body {
     font: 3em "Josefin Sans", sans-serif;
     text-transform: uppercase;
 }
-.section-three-header button {
+.section-three-header button,  #mobile-btn {
 	background: none;
 	outline: none;
     cursor: pointer;
@@ -146,7 +146,7 @@ body {
 	padding: 0.6em 1.6em;
     border: 2px solid var(--very-dark-gray-color);
 }
-.section-three-header button:hover {
+.section-three-header button:hover, #mobile-btn:hover {
     background-color: var(--dark-gray-color);
     color: var(--main-white-color);
 }
@@ -344,6 +344,7 @@ small {
         margin-top: 2em;
         display: flex;
         flex-direction: column;
+        grid-gap: 0.5em;
     }
     .overlay-text {
         background: unset;   
@@ -366,6 +367,9 @@ small {
     .section-three {
         margin: 0 2em 2em 2em; 
     }
+    .overlay-text {
+        padding: 1em 1em 0.5em;
+    }
     .page-footer {
         padding: 1.5em 2em;
     }
@@ -386,6 +390,10 @@ small {
     #desktop-btn {
         display: none;
     }
+    #mobile-btn {
+        display: block;
+        margin: 1em auto;
+    }
     /* footer */
     #mobile-footer {
         display: flex;
@@ -397,7 +405,7 @@ small {
     #mobile-footer ul {
         list-style: none;
         width: auto; 
-        margin: auto; 
+        margin: 0.5em auto; 
     }
     .mobile-icons {
         display: flex;
