@@ -20,24 +20,18 @@
         <nav class="navbar" id="navbar-id">
           <div>
             <h1>loopstudios</h1>
-            <!-- Button to close the overlay navigation -->
-            <a href="javascript:void(0)" class="close-btn" id="close-btn-id" onclick="closeNav()">&times;</a>
-            <!-- Button to open the overlay navigation -->
-            <a href="javascript:void(0)" class="open-btn" id="open-btn-id" onclick="openNav()">&#9776;</a>   
+            <div class="menu-icon" onclick="openMenu(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
           </div>
-          
-          
-          <ul>
-            <!-- Button to close the overlay navigation
-            <li><a href="javascript:void(0)" class="close-btn" id="close-btn-id" onclick="closeNav()">&times;</a></li>
-            Button to open the overlay navigation
-            <li><a href="javascript:void(0)" class="open-btn" id="open-btn-id" onclick="openNav()">&#9776;</a></li> 
-             -->
-            <li class="overlay-nav-content"><a href="">About</a></li>
-            <li class="overlay-nav-content"><a href="">Careers</a></li>
-            <li class="overlay-nav-content"><a href="">Events</a></li>
-            <li class="overlay-nav-content"><a href="">Products</a></li>
-            <li class="overlay-nav-content"><a href="">Support</a></li>
+          <ul id="nav-ul">
+            <li class="nav-content"><a href="">About</a></li>
+            <li class="nav-content"><a href="">Careers</a></li>
+            <li class="nav-content"><a href="">Events</a></li>
+            <li class="nav-content"><a href="">Products</a></li>
+            <li class="nav-content"><a href="">Support</a></li>
           </ul>
         </nav>
         <p>
@@ -172,16 +166,18 @@
     </footer>
   </div>
 <script>
-  function openNav() {
-    document.getElementById("navbar-id").classList.add("overlay-nav");
-    document.getElementById("close-btn-id").style.display = "unset";
-    document.getElementById("open-btn-id").style.display = "none";
-    
-    let navContent = document.getElementsByClassName("overlay-nav-content");
-    for(let i=0; i<navContent.length; i++) {
-      navContent[i].style.cssText = "display: inline-block; list-style: initial; text-transform: uppercase";
+  function openMenu(x) {
+    x.classList.toggle("change");
+    menu(x);
+  }
+  function menu(x){
+    if(x.classList.contains("change")) {
+      document.getElementById("navbar-id").classList.add("overlay-nav");
+      document.getElementById("nav-ul").classList.add("overlay-nav-style"); 
+    } else {
+      document.getElementById("navbar-id").classList.remove("overlay-nav");
+      document.getElementById("nav-ul").classList.remove("overlay-nav-style");
     }
-  
   }
 </script>
 </script>

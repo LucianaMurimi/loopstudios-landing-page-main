@@ -276,36 +276,6 @@ small {
  #mobile-footer {
      display: none;
  }
-.open-btn {
-    position: absolute;
-    top: 2.5em;
-    right: 4em;
-    display: none;
-}
-.close-btn {
-    position: absolute;
-    top: 0;
-    right: 1em;
-    display: none;
-}
-.open-btn {
-    font-size: 1.2em;
-}
-.close-btn {
-     font-size: 3em;
- }
-.overlay-nav {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    background-color: var(--main-black-color);
-    overflow-y: hidden;
-    transition: 0.5s;
- }
-
  @media screen and (max-width: 1279px) {
     /* margins and paddings reduced */
     .section-one {
@@ -349,24 +319,6 @@ small {
         max-height: 80vh;
         padding: 2.5em 4em; 
     }
-    .open-btn {
-        display: inline;
-    }
-    .section-one nav {
-        display: block;
-        flex-wrap: unset; 
-        justify-content: unset; 
-        align-items: unset;  
-    } 
-    
-    .section-one ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-    } 
-    .overlay-nav-content {
-        display: none;
-    }
     .section-one p {
         margin: auto 0;
         max-width: 450px;
@@ -397,6 +349,59 @@ small {
     .overlay-text {
         background: unset;   
     }
+
+    /* menu icon */
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+        position: absolute;
+        top: 2.5em;
+        right: 4em;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 2px;
+        background-color: var(--main-white-color);
+        margin: 4px 0;
+        transition: 0.4s;
+    }
+    
+    /* Rotate first bar */
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-6px, 2.5px);
+        transform: rotate(-45deg) translate(-6px, 2.5px);
+    }
+    
+    /* Fade out the second bar */
+    .change .bar2 {
+        opacity: 0;
+    }
+    
+    /* Rotate last bar */
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-6px, -2.5px);
+        transform: rotate(45deg) translate(-6px, -2.5px);
+    }
+    /* The Overlay (background) */
+    .overlay-nav {
+        /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+        height: 100vh;
+        width: 100vw;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        background-color: var(--main-black-color);
+        overflow-x: hidden; /* Disable horizontal scroll */
+        transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        padding: 2.5em 1.5em;
+    }
+    .overlay-nav-style {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+    }
+    
  }
  @media screen and (max-width: 549px) {
     /* margins and paddings reduced */
