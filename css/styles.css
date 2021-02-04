@@ -359,7 +359,7 @@ small {
         display: inline-block;
         cursor: pointer;
         position: absolute;
-        top: 2.5em;
+        top: 3em;
         right: 4em;
     }
     .bar1, .bar2, .bar3 {
@@ -509,7 +509,7 @@ small {
 
     /*responsive nav bar*/
     .menu-icon {
-        top: 2.5em;
+        top: 3em;
         right: 2em;
     }
     .overlay-nav {
