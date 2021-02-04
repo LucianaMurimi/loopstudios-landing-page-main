@@ -42,7 +42,8 @@ body {
     color: var(--main-white-color);
     padding: 3em 9em;
 }
-.section-one nav, .footer-div1, .footer-div2 {
+/* .section-one nav */
+.navbar, .footer-div1, .footer-div2 {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between; 
@@ -52,7 +53,8 @@ body {
     font-size: 2.2em;
     font-weight: bolder;
 }
-.section-one ul {
+/* .section-one ul  */
+.nav-ul {
     list-style: none;
 	display: flex;
 	order: 1;
@@ -350,7 +352,7 @@ small {
         background: unset;   
     }
 
-    /* menu icon */
+    /* MENU ICON */
     .menu-icon {
         display: inline-block;
         cursor: pointer;
@@ -366,23 +368,23 @@ small {
         transition: 0.4s;
     }
     
-    /* Rotate first bar */
+    /* rotate first bar */
     .change .bar1 {
         -webkit-transform: rotate(-45deg) translate(-6px, 2.5px);
         transform: rotate(-45deg) translate(-6px, 2.5px);
     }
     
-    /* Fade out the second bar */
+    /* fade out the second bar */
     .change .bar2 {
         opacity: 0;
     }
     
-    /* Rotate last bar */
+    /* rotate last bar */
     .change .bar3 {
         -webkit-transform: rotate(45deg) translate(-6px, -2.5px);
         transform: rotate(45deg) translate(-6px, -2.5px);
     }
-    /* The Overlay (background) */
+    /* the Overlay (background) */
     .overlay-nav {
         /* Height & width depends on how you want to reveal the overlay (see JS below) */   
         height: 100vh;
@@ -394,13 +396,29 @@ small {
         background-color: var(--main-black-color);
         overflow-x: hidden; /* Disable horizontal scroll */
         transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        /* justify-content: center; */
+        /* text-transform: uppercase; */
         padding: 2.5em 1.5em;
     }
-    .overlay-nav-style {
+    .nav-ul {
+        display: none;
+    }
+    .nav-ul-res {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        text-transform: uppercase;
+        margin-top: 2em;
+    }
+    /* .overlay-nav-style {
         display: flex;
         flex-direction: column;
         text-transform: uppercase;
-    }
+    } */
     
  }
  @media screen and (max-width: 549px) {
