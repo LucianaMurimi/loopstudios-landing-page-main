@@ -176,17 +176,16 @@
     
     if(x.classList.contains("change")) {
       navBar.classList.remove("navbar");
-      navBar.classList.add("overlay-nav");
 
-      // navUL.classList.remove("nav-ul");
+      navBar.classList.add("overlay-nav");
       navUL.classList.add("nav-ul-res")
     } else {
       navBar.classList.remove("overlay-nav");
-      navUL.classList.remove("nav-ul-res");
       
+      navBar.classList.add("navbar")
+      navUL.classList.remove("nav-ul-res");
     }
   }
-</script>
 </script>
 </body>
 </html>

@@ -71,6 +71,9 @@ body {
     text-decoration: none;
     color: inherit;
 }
+.section-one a:hover {
+    text-decoration: underline;
+}
 .section-one p {
     margin: auto 0;
     max-width: 550px;
@@ -128,8 +131,7 @@ body {
     justify-content: space-between; 
     align-items: center; 
 }
-/* .section-three-header h2 ==> same as section-two h2 */
-.section-three-header h2{
+.section-three-header h2 {
     font: 3em "Josefin Sans", sans-serif;
     text-transform: uppercase;
 }
@@ -278,7 +280,7 @@ small {
  #mobile-footer {
      display: none;
  }
- @media screen and (max-width: 1279px) {
+ @media screen and (max-width: 1280px) {
     /* margins and paddings reduced */
     .section-one {
         padding: 3em 6em;
@@ -315,7 +317,7 @@ small {
     }    
  }
 
- @media screen and (max-width: 767px) {
+ @media screen and (max-width: 768px) {
     /* margins and paddings reduced */
     .section-one {
         max-height: 80vh;
@@ -365,7 +367,7 @@ small {
         height: 2px;
         background-color: var(--main-white-color);
         margin: 4px 0;
-        transition: 0.4s;
+        transition: 0.5s;
     }
     
     /* rotate first bar */
@@ -400,9 +402,7 @@ small {
         display: flex;
         flex-direction: column;
         align-content: center;
-        /* justify-content: center; */
-        /* text-transform: uppercase; */
-        padding: 2.5em 1.5em;
+        padding: 2em 4em;
     }
     .nav-ul {
         display: none;
@@ -412,13 +412,11 @@ small {
         flex-direction: column;
         list-style: none;
         text-transform: uppercase;
+        font-weight: unset;
+        font-size: 1.2em;
         margin-top: 2em;
     }
-    /* .overlay-nav-style {
-        display: flex;
-        flex-direction: column;
-        text-transform: uppercase;
-    } */
+
     
  }
  @media screen and (max-width: 549px) {
@@ -507,5 +505,14 @@ small {
     }
     #desktop-footer {
         display: none;
+    }
+
+    /*responsive nav bar*/
+    .menu-icon {
+        top: 2.5em;
+        right: 2em;
+    }
+    .overlay-nav {
+        padding: 2em 2em;
     }
  }
